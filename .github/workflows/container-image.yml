@@ -38,7 +38,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/mjura/myapp:latest
+            ghcr.io/go4clouds/myapp:latest
       -
         name: Retrieve tag name
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
@@ -54,4 +54,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/mjura/myapp:${{ env.TAG_NAME }}
+            ghcr.io/go4clouds/myapp:${{ env.TAG_NAME }}
