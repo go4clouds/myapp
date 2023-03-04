@@ -1,0 +1,6 @@
+echo "Example output how to connect to myapp"
+
+kubectl port-forward -n {{ .Release.Namespace }} svc/{{ .Release.Name }} 8080:{{ .Values.service.port }} &
+
+echo "Visit http://127.0.0.1:8080 to test myapp application"
+curl http://127.0.0.1:8080
