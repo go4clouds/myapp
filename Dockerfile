@@ -1,6 +1,8 @@
-FROM registry.opensuse.org/opensuse/leap:15.3
+FROM registry.opensuse.org/opensuse/leap:15.6
 
-RUN zypper ref && zypper install -y python3 python3-pip
+RUN zypper refresh
+RUN zypper install -y wget curl iproute2 bind-utils 
+RUN zypper install -y python3 python3-pip
 
 RUN mkdir /app
 WORKDIR /app
